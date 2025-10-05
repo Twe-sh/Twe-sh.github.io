@@ -1,0 +1,23 @@
+:root{
+    --bs-primary: #FDCB6E;
+    --bs-secondary: #A29BFE;
+    --bs-dark: #2E294E;
+    --bs-darker: #1B1B2F;
+    --bs-tertiary: #90C2E7;
+}
+
+.bg-dark {
+    background-color: var(--bs-dark) !important;
+}
+
+.bg-darker {
+    background-color: var(--bs-darker) !important;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bs-secondary) !important;
+}
