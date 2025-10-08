@@ -1,9 +1,9 @@
 :root{
     --bs-primary: #FDCB6E;
     --bs-secondary: #A29BFE;
+    --bs-tertiary: #90C2E7;
     --bs-dark: #2E294E;
     --bs-darker: #1B1B2F;
-    --bs-tertiary: #90C2E7;
 }
 
 .bg-dark {
@@ -20,4 +20,119 @@
 
 .bg-secondary {
     background-color: var(--bs-secondary) !important;
+}
+
+/*home page styles */
+.goto-btn {
+    margin-top: auto;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    background-color: var(--bs-dark);
+    color: white;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goto-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Blog post styles */
+.blog-post {
+    border-radius: 8px;
+}
+
+.blog-post:nth-child(odd) {
+    background-color: var(--bs-tertiary);
+}
+
+.blog-post:nth-child(even) {
+    background-color: var(--bs-secondary);
+}
+
+.blog-post-title {
+    text-decoration: underline;
+}
+
+
+/* Contact page styles */
+.contact-card {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#contact-image {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.contact-card {
+    position: relative;
+}
+
+.contact-card::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -6px;
+    right: -6px;
+    bottom: -12px;
+    z-index: -1;
+    border-radius: 20px;
+    padding: 0;
+    background: var(--bs-primary);
+    filter: blur(12px);
+    animation: contact-card-bg-fade 6s linear infinite;
+    transition: background 1s;
+}
+
+a {
+    color: var(--bs-dark);
+}
+
+a:hover {
+    color: #468847;
+    text-decoration: none;
+}
+
+/* Animations*/
+.animate-slideInUp {
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes contact-card-bg-fade {
+    0% {
+        background: var(--bs-primary);
+    }
+    25% {
+        background: var(--bs-secondary);
+    }
+    50% {
+        background: var(--bs-tertiary);
+    }
+    75% {
+        background: var(--bs-dark);
+    }
+    100% {
+        background: var(--bs-primary);
+    }
 }
